@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - AniEssentials</title>
+    <title>Login - AniE-Store</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="index.jsp">AniEssentials</a>
+        <a class="navbar-brand" href="index.jsp">AniE-Store</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -39,7 +40,7 @@
     </div>
 </nav>
 
-<div class="container mt-5">
+<div class="container mt-5 form-container">
     <h2 class="text-center">Login</h2>
     <form action="loginServlet" method="post">
         <div class="form-group">
@@ -59,6 +60,7 @@
         </div>
         <% } %>
         <button type="submit" class="btn btn-primary btn-block">Login</button>
+        <p class="btn-block-2">Don't have an account ? <a href="signup.jsp">Sign Up</a> or <a href="logout.jsp">Logout</a></p>
     </form>
 </div>
 

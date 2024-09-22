@@ -1,0 +1,20 @@
+.form-group {
+    margin-left: 310px;
+    margin-top: 30px;
+}
+
+.form-control {
+    width: 70%;
+}
+
+.btn-block {
+    width: 30%;
+    margin-left: 420px;
+}
+
+.btn-block-2 {
+    width: 30%;
+    margin-left: 420px;
+    margin-top: 20px;
+    color: grey;
+}
