@@ -20,9 +20,9 @@ import java.util.List;
 @WebServlet(name = "cartServlet", value = "/cartServlet")
 public class cartServlet extends HttpServlet {
 
-    private static final String DB_URL = "jdbc:postgresql://localhost:5432/EcommerceStore";
-    private static final String DB_USER = "postgres";
-    private static final String DB_PASSWORD = "anita";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/EcommerceStore";
+    private static final String DB_USER = "root";
+    private static final String DB_PASSWORD = "P@ssw0rd2024#Secure";
 
     private Connection getConnection() throws SQLException {
         return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);

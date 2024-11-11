@@ -14,23 +14,27 @@ public class userDao {
     }
 
     public void registerUser(String email, String firstname, String lastname, String password) throws SQLException {
+        // Corrected SQL query without double quotes around the table name
         String query = "INSERT INTO users (firstname, lastname, email, password) VALUES (?, ?, ?, ?)";
+
         try (PreparedStatement pst = connection.prepareStatement(query)) {
             pst.setString(1, firstname);
             pst.setString(2, lastname);
             pst.setString(3, email);
             pst.setString(4, password);
             int rowsAffected = pst.executeUpdate();
+
             if (rowsAffected > 0) {
                 System.out.println("User registered successfully.");
             } else {
-                System.err.println("Failed to register user.");
+                System.err.println("Failed to register User.");
             }
         } catch (SQLException e) {
             e.printStackTrace();
             throw e;
         }
     }
+
 
     public users login(String email, String password) throws SQLException {
         users user = null;

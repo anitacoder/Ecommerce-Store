@@ -4,19 +4,25 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
-    // Retrieve the user object from the session
     users user = (users) session.getAttribute("user");
 
-    // Check if the user is logged in
     if (user == null) {
-        // If the user is not logged in, redirect to the login page
         response.sendRedirect("login.jsp");
         return;
     }
 
-    // Retrieve the product list from the session
     List<products> productList = (List<products>) session.getAttribute("products");
 %>
+
+<style>
+    .card {
+        height: 100%;
+    }
+
+    .card-img-top {
+        margin-top: 40px;
+    }
+</style>
 
 <!DOCTYPE html>
 <html lang="en">

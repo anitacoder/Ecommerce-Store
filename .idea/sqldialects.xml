@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/src/main/java/org/example/ecommercestore/Dao/userDao.java" dialect="GenericSQL" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/3e126361-cb34-4ad2-bc7d-ff5e80950fb4/console.sql" dialect="SQLite" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/49587631-b13c-4a88-835d-5d042c3e83dd/console.sql" dialect="MySQL" />
   </component>
 </project>

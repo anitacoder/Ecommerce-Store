@@ -19,7 +19,8 @@ public class productDao {
 
     public List<products> getAllProducts() {
         List<products> productList = new ArrayList<>();
-        String query = "SELECT * FROM \"productIts\""; // Ensure proper quoting
+        // Replaced double quotes with backticks around table name
+        String query = "SELECT * FROM `productIts`";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query);
              ResultSet resultSet = preparedStatement.executeQuery()) {
 
@@ -43,7 +44,8 @@ public class productDao {
         List<Cart> productList = new ArrayList<>();
 
         if(cartList != null && !cartList.isEmpty()) {
-            String query = "SELECT * FROM \"productIts\" WHERE id = ?";
+            // Replaced double quotes with backticks around table name
+            String query = "SELECT * FROM `productIts` WHERE id = ?";
             try(PreparedStatement preparedStatement = this.connection.prepareStatement(query)){
                 for(Cart item : cartList) {
                     preparedStatement.setInt(1, item.getId());
@@ -68,7 +70,8 @@ public class productDao {
 
     public products getProductById(int productId) {
         products product = null;
-        String query = "SELECT * FROM \"productIts\" WHERE id = ?";
+        // Replaced double quotes with backticks around table name
+        String query = "SELECT * FROM `productIts` WHERE id = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, productId);
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
@@ -86,5 +89,4 @@ public class productDao {
         }
         return product;
     }
-
 }

@@ -42,7 +42,7 @@ public class signupServlet extends HttpServlet {
         try (Connection conn = DBConnection.getConnection()) {
             System.out.println("Database connection established.");
 
-            String query = "INSERT INTO \"users\" (firstname, lastname, email, password) VALUES (?, ?, ?, ?)";
+            String query = "INSERT INTO `users` (firstname, lastname, email, password) VALUES (?, ?, ?, ?)";
             try (PreparedStatement pst = conn.prepareStatement(query)) {
                 pst.setString(1, firstname);
                 pst.setString(2, lastname);
